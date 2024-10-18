@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<title>Our Menu</title>
+
+<style>
+    .grid-container {
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-columns: auto auto auto;
+    }
+    .grid-item {
+    display: inline-grid;
+    text-align: center;
+    }
+    img {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    }
+</style>
+
+    <h2>Cold Drinks:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Cold Drinks" %}
+        <div class="grid-item Cold-Drinks">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Coffees:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Coffees" %}
+
+        <div class="grid-item Coffees">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Teas:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Teas" %}
+        <div class="grid-item Teas">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Hot Drinks:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Hot Drinks" %}
+        <div class="grid-item Hot-Drinks">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Pastries:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Pastries" %}
+        <div class="grid-item Pastries">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+    <h2>Desserts:</h2>
+    {% for item in items %}
+    <div class="grid-container">
+    {% if item[3] == "Desserts" %}
+        <div class="grid-item Desserts">
+            <h3>{{item[1]}}</h3>
+            <img src={{item[4]}} />
+            <p>£{{item[2]}}0</p>
+        </div>
+    {% endif %}
+    </div>
+    {% endfor %}
+
+{% endblock %}
