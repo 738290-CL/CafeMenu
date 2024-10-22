@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<title>Add to our Menu</title>
+
+<h1>Add a product to our Menu:</h1>
+<form method="post" enctype="multipart/form-data">
+    <p>Name of Item:</p>
+    <input type="text" id="item_name" name="item_name">
+    <p>Price of Item:</p>
+    <input type="number" id="item_price" name="item_price">
+    <p>Type of Item:</p>
+    <select id="item_type" name="item_type">
+        <option value="Cold Drinks">Cold Drinks</option>
+        <option value="Coffees">Coffees</option>
+        <option value="Teas">Teas</option>
+        <option value="Hot Drinks">Hot Drinks</option>
+        <option value="Pastries">Pastries</option>
+        <option value="Desserts">Desserts</option>
+    </select>
+    <p>Image of Item:</p>
+    <input type="file" id="item_file" name="item_file"><br><br>
+    <input type="submit">
+</form>
+
+{% endblock %}

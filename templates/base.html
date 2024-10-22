@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<nav>
+    <a href="/"><button>Home</button></a>
+    <a href="/menu"><button>Menu</button></a>
+    <a href="/add"><button>Add a Product</button></a>
+    <a href="/cart"><button>Your Cart</button></a>
+</nav>
+<nav>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="alert">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</nav>
+<body>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

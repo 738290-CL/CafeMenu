@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<title>Your Cart!</title>
+{% for item in order %}
+    <h3>{{ item }}</h3>
+{% endfor %}
+
+{% endblock %}
